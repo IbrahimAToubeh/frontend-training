@@ -5,7 +5,7 @@
     --color-text-heading: #111111;
     --color-text-muted: #aaaaaa;
     --color-text-light: #999999;
-    --color-accent-green: #aacc00; /* Lime Green */
+    --color-accent-green: #aacc00;
     --color-tag-green: #aacc00;
     --color-border-card: #e0e0e0;
     --color-purple-accent: #8a2be2;
@@ -28,9 +28,6 @@ body {
     overflow-x: hidden;
 }
 
-/* =========================================
-   1. NAVBAR (MOBILE DEFAULT)
-   ========================================= */
 .navbar {
     background-color: var(--color-bg-dark);
     display: grid;
@@ -71,9 +68,6 @@ body {
     display: none;
 }
 
-/* =========================================
-   2. HERO SECTION
-   ========================================= */
 .hero-section {
     padding: 3rem 0.5rem 2rem;
     text-align: center;
@@ -155,9 +149,6 @@ body {
     margin: 0 auto;
 }
 
-/* =========================================
-   3. FEATURED SECTION
-   ========================================= */
 .featured-section {
     padding: 0 1.25rem 3rem;
     text-align: center;
@@ -387,9 +378,6 @@ body {
     background: var(--color-accent-green);
 }
 
-/* =========================================
-   4. EVENTS SECTION
-   ========================================= */
 .events-section {
     padding: 0 1.25rem 3rem;
     text-align: center;
@@ -542,9 +530,6 @@ body {
     gap: 0.3rem;
 }
 
-/* =========================================
-   5. REVERIFI+ (SERVICES)
-   ========================================= */
 .reverifi-plus-section {
     padding: 3rem 1.25rem 4rem;
     text-align: center;
@@ -610,9 +595,6 @@ body {
     font-weight: 500;
 }
 
-/* =========================================
-   6. EXPLORE SECTION
-   ========================================= */
 .explore-section {
     padding: 0 1.25rem 4rem;
     text-align: center;
@@ -725,9 +707,6 @@ body {
     display: flex;
 }
 
-/* =========================================
-   7. CLAIM & FOOTER
-   ========================================= */
 .claim-section {
     position: relative;
     height: 28rem;
@@ -947,13 +926,8 @@ body {
     display: none;
 }
 
-
-/* =========================================================
-   DESKTOP MEDIA QUERY (min-width: 64rem)
-   ========================================================= */
 @media (min-width: 64rem) {
 
-    /* --- GLOBAL CONTAINER --- */
     .navbar,
     .hero-section,
     .featured-section,
@@ -970,7 +944,6 @@ body {
         padding-right: 2rem;
     }
 
-    /* --- NAVBAR (Fixed Alignment) --- */
     .navbar {
         display: flex;
         justify-content: space-between;
@@ -982,7 +955,6 @@ body {
         align-items: center;
     }
 
-    /* Links placed next to logo */
     .nav-left .nav-links {
         display: flex;
         margin-left: 4rem;
@@ -1006,7 +978,6 @@ body {
         color: var(--color-accent-green);
     }
 
-    /* Auth on the right */
     .nav-auth {
         display: flex;
         align-items: center;
@@ -1046,7 +1017,6 @@ body {
         font-size: 1rem;
     }
 
-    /* --- HERO & SEARCH --- */
     .hero-section {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1106,7 +1076,6 @@ body {
         transform: scale(1.1);
     }
 
-    /* --- FEATURED SECTION --- */
     .featured-section h2 {
         font-size: 2rem;
         margin-bottom: 3rem;
@@ -1133,7 +1102,6 @@ body {
         display: none;
     }
 
-    /* --- EVENTS SECTION (Fixed Arrows & Grid) --- */
     .events-section h2 {
         font-size: 2rem;
     }
@@ -1151,7 +1119,6 @@ body {
         position: relative;
     }
 
-    /* Tags Visible on Desktop */
     .event-image-wrapper .card-tag {
         position: absolute;
         top: 1rem;
@@ -1166,12 +1133,10 @@ body {
         display: inline-block;
     }
 
-    /* Carousel Container Reset */
     .events-carousel-container {
         max-width: none;
         position: relative;
         display: block;
-        /* Block for absolute arrow positioning */
     }
 
     .events-grid {
@@ -1187,7 +1152,6 @@ body {
         box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
     }
 
-    /* Arrows - Styled like mobile, positioned absolutely */
     .nav-arrow {
         position: absolute;
         top: 50%;
@@ -1221,7 +1185,6 @@ body {
         transform: translateY(-50%) scale(1.1);
     }
 
-    /* --- REVERIFI+ SECTION --- */
     .reverifi-plus-section {
         display: grid;
         grid-template-columns: 0.8fr 1.2fr;
@@ -1260,7 +1223,6 @@ body {
         font-size: 1rem;
     }
 
-    /* --- EXPLORE SECTION (Bento Grid) --- */
     .explore-section h2 {
         padding-top: 2rem;
         font-size: 2rem;
@@ -1294,8 +1256,6 @@ body {
         display: none;
     }
 
-    /* --- CLAIM ADDRESS (Fixed Grid Layout) --- */
-    /* 8. Claim & Footer (Pin Left, Content Right, Transparent) */
     .claim-section {
         max-width: none;
         padding: 0;
@@ -1322,54 +1282,47 @@ body {
     .claim-overlay-container {
         position: absolute;
         z-index: 1;
-        background: transparent; /* Transparent background */
-        
+        background: transparent;
         width: 90%;
         max-width: 45rem;
-        
-        /* Create a Grid: Pin on left, Content on right */
         display: grid;
-        grid-template-columns: auto 1fr; /* Column 1: Pin size, Column 2: Rest */
-        align-items: center; /* Center items vertically */
-        column-gap: 1.5rem; /* Space between Pin and Content */
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        column-gap: 1.5rem;
     }
 
-    /* 1. Pin Icon: Spans two rows on the left */
     .pin-icon-wrapper {
         grid-column: 1;
-        grid-row: 1 / span 2; /* Occupy height of both Text and Input */
+        grid-row: 1 / span 2;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
     .pin-icon-wrapper img {
-        height: 4.5rem; /* Larger pin */
+        height: 4.5rem;
         margin-bottom: 0;
     }
 
-    /* 2. Header Text: Top Right */
     .claim-overlay-container h3 {
         grid-column: 2;
         grid-row: 1;
         font-size: 2.5rem;
         margin-bottom: 0.5rem;
-        text-align: left; /* Align text with input start */
+        text-align: left;
         color: #222;
     }
 
-    /* 3. Search Box: Bottom Right */
     .claim-search-box {
         grid-column: 2;
         grid-row: 2;
         width: 100%;
-        
         background: white;
         padding: 0.5rem 0.5rem 0.5rem 1.5rem;
         border-radius: 3rem;
         display: flex;
         align-items: center;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Shadow for pop */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     }
 
     .claim-search-box input {
@@ -1384,7 +1337,7 @@ body {
         width: 3.2rem;
         height: 3.2rem;
     }
-    /* --- JOIN BANNER --- */
+
     .join-banner-section {
         flex-direction: row;
         padding: 2rem 1rem;
@@ -1403,7 +1356,6 @@ body {
         vertical-align: middle;
     }
 
-    /* --- FOOTER --- */
     .main-footer {
         max-width: 1200px;
         display: grid;

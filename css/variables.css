@@ -1,0 +1,17 @@
+:root {
+    --color-white: #ffffff;
+    --color-bg-dark: #1a1a1a;
+    --color-text-main: #333333;
+    --color-text-heading: #111111;
+    --color-text-muted: #aaaaaa;
+    --color-text-light: #999999;
+    --color-accent-green: #aacc00; 
+    --color-border-card: #e0e0e0;
+    --color-purple-accent: #8a2be2;
+    --color-lighter-grey: #f2f2f2;
+    
+    --font-primary: 'Montserrat', sans-serif;
+    --font-weight: 500;
+    --font-bold: 700;
+    --color-gray: #fafafa;
+}

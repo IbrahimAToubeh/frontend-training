@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #3498db;
+    --primary-dark: #2980b9;
+    --bg-color: #f9f9f9;
+    --text-color: #333333;
+    --border-color: #cccccc;
+    --radius-md: 0.5rem; 
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --focus-ring: 0 0 0 .125rem rgba(52, 152, 219, 0.4);
+}
+
+body {
+    font-family: sans-serif;
+    color: var(--text-color);
+    background-color: #eef2f3;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.signup-form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: 0 0.25rem 0.4rem rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 32rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.signup-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.signup-form__label {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.signup-form__input {
+    padding: 0.75rem;
+    border: 0.0625rem solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+.signup-form__row{
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.signup-form__input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: var(--focus-ring);
+}
+
+.signup-form__fieldset {
+    border: 0.0625rem solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    margin: 0;
+}
+
+.signup-form__legend {
+    font-weight: bold;
+    padding: 0 var(--spacing-sm);
+    color: var(--primary-color);
+}
+
+.signup-form__checkbox-group,
+.signup-form__radio-group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.signup-form__check-label,
+.signup-form__radio-label {
+    cursor: pointer;
+}
+
+.signup-form__check-input:focus,
+.signup-form__radio-input:focus {
+    outline: none;
+    box-shadow: var(--focus-ring);
+    border-radius: 0.125rem;
+}
+
+.signup-form__btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    margin-top: var(--spacing-md);
+    transition: background-color 0.3s;
+}
+
+.signup-form__btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.signup-form__btn:focus {
+    outline: none;
+    box-shadow: var(--focus-ring);
+}
+
+@supports (accent-color: var(--primary-color)) {
+    .signup-form__check-input,
+    .signup-form__radio-input {
+        accent-color: var(--primary-color);
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+}

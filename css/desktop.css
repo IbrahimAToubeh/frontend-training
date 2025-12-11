@@ -1,0 +1,511 @@
+@media (min-width: 64rem) {
+
+    /* 1. Global Container */
+    .navbar,
+    .hero-section,
+    .featured-section,
+    .events-section,
+    .reverifi-plus-section,
+    .explore-section,
+    .join-banner-section,
+    .main-footer,
+    .claim-section {
+        max-width: 90rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    /* 2. Navbar Styling */
+    /* 1. Set the main container to push groups apart */
+    .navbar {
+        display: flex;
+        justify-content: space-between; /* Pushes "Nav Left" to start and "Auth" to end */
+        align-items: center;
+        /* Ensure existing padding/margins remain */
+    }
+
+    /* 2. Arrange Logo and Links side-by-side */
+    .nav-left {
+        display: flex;
+        align-items: center;
+    }
+
+    /* 3. Position the links next to the logo */
+    .nav-left .nav-links {
+        display: flex;
+        margin-left: 4rem; /* This creates the space between Logo and Links */
+        
+        /* These lines reset the "Absolute Centering" you had before */
+        position: static;
+        transform: none;
+        top: auto;
+        left: auto;
+    }
+
+    /* 4. Ensure Auth section sits naturally on the right */
+    .nav-auth {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-left: 0; /* Removed 'auto' since justify-content handles the spacing now */
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    
+    .logo {
+        flex-grow: 0;
+        padding-right: 0;
+        margin-right: auto;
+        /* Push everything else to the right? No, we want center links */
+    }
+
+    .logo img {
+        height: 2.5rem;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 3rem;
+        flex-direction: row;
+        list-style: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        font-size: 1rem;
+        transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+        color: var(--color-accent-green);
+    }
+
+    .nav-auth {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .sign-in-link {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    .btn-join-nav {
+        background: var(--color-accent-green);
+        border: none;
+        padding: 0.8rem 2rem;
+        border-radius: 2rem;
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--color-text-heading);
+        font-size: 1rem;
+    }
+
+    /* 3. Hero & Search */
+    .hero-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+        text-align: left;
+        padding: 5rem 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 2.5rem;
+        max-width: 100%;
+    }
+
+    /* Desktop Search: Show Location Icon, Pad Input Left */
+    .search-container {
+        margin: 0;
+        max-width: 32rem;
+        padding: 0.5rem;
+        position: relative;
+        background: white;
+        border-radius: 3rem;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Location Icon inside Search (Desktop) */
+    .search-icon-left {
+        position: absolute;
+        left: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 1.2rem;
+        width: auto;
+        opacity: 0.3;
+        display: block;
+    }
+
+    .search-container input {
+        font-size: 1rem;
+        height: 3.5rem;
+        padding-left: 3.5rem;
+        /* Space for icon */
+        padding-right: 4rem;
+    }
+
+    .search-btn-right {
+        width: 3.5rem;
+        height: 3.5rem;
+        right: 0.5rem;
+    }
+
+    .hero-illustration {
+        grid-column: 2;
+    }
+
+    .hero-illustration img {
+        max-width: 100%;
+        transform: scale(1.1);
+    }
+
+    /* 4. Featured Section (Reset to Grid) */
+    .featured-section h2 {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .listings-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        overflow-x: visible;
+        padding-bottom: 0;
+        margin-bottom: 3rem;
+    }
+
+    .listing-card {
+        min-width: auto;
+    }
+
+    .image-wrapper {
+        height: 16rem;
+    }
+
+    .pagination-dots {
+        display: none;
+    }
+
+    /* 5. Events Section (Reset to Grid) */
+    .events-section h2 {
+        font-size: 2rem;
+    }
+    .event-tabs {
+        margin-bottom: 3rem;
+        font-size: 1.1rem;
+    }
+    .events-header{
+        padding-top: 2rem;
+    }
+    /* Ensure the wrapper allows floating children */
+.event-image-wrapper {
+    position: relative; /* This serves as the anchor */
+}
+
+/* Position the tag in the top-left corner */
+.event-image-wrapper .card-tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10; /* Ensures it sits on top of the image */
+    
+    /* Ensure styles match your design system */
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.2rem;
+    text-transform: uppercase;
+    display: inline-block; /* Fixes display issues */
+}
+
+/* Orange Color Variable (if not already working) */
+.tag-orange {
+    background-color: #ff6b35; /* Or var(--color-tag-orange) */
+}
+
+    .events-carousel-container {
+        max-width: none;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .events-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        overflow-x: visible;
+        padding-bottom: 0;
+    }
+
+    .event-card {
+        min-width: auto;
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-arrow {
+        position: static;
+        transform: none;
+        background: transparent;
+        color: #ccc;
+        border: none;
+        box-shadow: none;
+        font-size: 1.5rem;
+    }
+
+    .nav-arrow:hover {
+        color: var(--color-accent-green);
+    }
+
+    /* 6. Reverifi+ Section (Side by Side) */
+    .reverifi-plus-section {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 4rem;
+        align-items: center;
+        text-align: left;
+        padding: 6rem 2rem;
+    }
+
+    .plus-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .plus-description {
+        font-size: 1.1rem;
+        margin: 0 0 2.5rem 0;
+        max-width: 90%;
+    }
+
+    .btn-see-more {
+        margin: 0;
+        justify-self: start;
+    }
+
+    .services-grid {
+        gap: 3rem 2rem;
+        margin: 0;
+        max-width: none;
+    }
+
+    .service-item img {
+        height: 3rem;
+    }
+
+    .service-item span {
+        font-size: 1rem;
+    }
+
+    /* 7. Explore Section (Bento Grid) */
+    .explore-section h2 {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .explore-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, 14rem);
+        gap: 1.5rem;
+        overflow-x: visible;
+        padding-bottom: 0;
+    }
+
+    .explore-card {
+        min-width: auto;
+        height: 100%;
+    }
+
+    .main-city-card {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+
+    .main-city-card .explore-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+
+    /* 8. Claim & Footer */
+    .claim-section {
+        max-width: none;
+        padding: 0;
+        height: 22rem;
+    }
+    .map-background{
+        display: flex;
+    }
+
+    .claim-overlay-container {
+        max-width: 35rem;
+        padding: 2.5rem;
+    }
+
+    .claim-search-box {
+        padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    }
+
+    .claim-search-box input {
+        font-size: 1rem;
+    }
+
+    .claim-search-btn {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    .join-banner-section {
+        flex-direction: row;
+        padding: 2rem 1rem;
+        height: 5rem;
+    }
+
+    .join-content {
+        font-size: 1.5rem;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .white-logo {
+        margin-left: 0.5rem;   /* Adds space to the left of the logo */
+        padding-top: 0;        /* Optional: Resets the mobile padding for better alignment */
+        vertical-align: middle; /* Optional: Aligns the logo with the center of the text */
+    }
+    .main-footer {
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1fr;
+        gap: 3rem;
+        padding: 4rem 2rem;
+    }
+
+    .footer-contact {
+        margin-bottom: 0;
+    }
+
+    .footer-links-container {
+        margin-bottom: 0;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .newsletter-box {
+        width: 100%;
+    }
+    .footer-social-bar{
+        justify-content: center;
+    }
+    /* 5. Events Section */
+    .events-section h2 {
+        font-size: 2rem;
+    }
+    .event-tabs {
+        margin-bottom: 3rem;
+        font-size: 1.1rem;
+    }
+   
+    
+    /* Ensure the wrapper allows floating children */
+    .event-image-wrapper {
+        position: relative; 
+    }
+
+    /* Position the tag in the top-left corner */
+    .event-image-wrapper .card-tag {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        z-index: 10; 
+        color: white;
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 0.3rem 0.8rem;
+        border-radius: 0.2rem;
+        text-transform: uppercase;
+        display: inline-block; 
+    }
+
+    .tag-orange {
+        background-color: #ff6b35; 
+    }
+
+    /* --- UPDATED CAROUSEL CONTAINER --- */
+    .events-carousel-container {
+        max-width: none;
+        position: relative; /* This is the anchor for the arrows */
+        display: block;     /* Removed 'flex' so arrows don't sit in the flow */
+    }
+
+    .events-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        overflow-x: visible;
+        padding-bottom: 0;
+    }
+
+    .event-card {
+        min-width: auto;
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+    }
+
+    /* --- UPDATED ARROWS (Mobile Style on Desktop) --- */
+    .nav-arrow {
+        position: absolute; /* Take them out of the flow */
+        top: 50%;
+        transform: translateY(-50%);
+        
+        /* Mobile Visuals */
+        width: 3rem; /* Slightly larger for desktop clicking */
+        height: 3rem;
+        background: var(--color-accent-green);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 20;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Added shadow for depth */
+        
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .left-arrow {
+        left: -1.5rem; /* Hang off the left edge slightly */
+    }
+
+    .right-arrow {
+        right: -1.5rem; /* Hang off the right edge slightly */
+    }
+
+    .nav-arrow:hover {
+        background-color: #bce012; 
+        transform: translateY(-50%) scale(1.1); /* Grow slightly on hover */
+    }
+    
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="total form exercise">
+    <title>Form Exercise</title>
+    <link rel="stylesheet" href="formtotal.css">
+</head>
+<body>
+
+    <main>
+
+    <div class="wrapper">
+        
+        <form class="signup-form" action="#" method="POST">
+
+            <div class="signup-form__row">
+                <div class="signup-form__group">
+                    <label for="fname" class="signup-form__label">First name:</label>
+                    <input type="text" id="fname" name="firstName" class="signup-form__input" placeholder="ibrahim"  aria-required="true">
+                </div>
+
+                <div class="signup-form__group">
+                    <label for="lname" class="signup-form__label">Last name:</label>
+                    <input type="text" id="lname" name="lastName" placeholder="toubeh" class="signup-form__input" aria-required="true">
+                </div>
+            </div>
+
+            <div class="signup-form__group">
+                <label for="email" class="signup-form__label">Email:</label>
+                <input type="email" id="email" name="email" class="signup-form__input" placeholder="example@example.com" autocomplete="email" aria-required="true">
+            </div>
+
+            <div class="signup-form__group">
+                <label for="password" class="signup-form__label">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Password here" class="signup-form__input" aria-required="true">
+            </div>
+
+            <div class="signup-form__group">
+                <label for="date" class="signup-form__label">Date:</label>
+                <input type="date" id="date" name="date" class="signup-form__input">
+            </div>
+
+            <fieldset class="signup-form__fieldset">
+                <legend class="signup-form__legend">Select your Skills:</legend>
+                
+                <div class="signup-form__checkbox-group">
+                    <input type="checkbox" name="skills" id="skill-html" value="html" class="signup-form__check-input">
+                    <label for="skill-html" class="signup-form__check-label">HTML</label>
+                </div>
+                
+                <div class="signup-form__checkbox-group">
+                    <input type="checkbox" name="skills" id="skill-css" value="css" class="signup-form__check-input">
+                    <label for="skill-css" class="signup-form__check-label">CSS</label>
+                </div>
+
+                <div class="signup-form__checkbox-group">
+                    <input type="checkbox" name="skills" id="skill-js" value="js" class="signup-form__check-input">
+                    <label for="skill-js" class="signup-form__check-label">JavaScript</label>
+                </div>
+            </fieldset>
+
+            <div class="signup-form__group">
+                <label for="phone" class="signup-form__label">Phone number:</label>
+                <input type="tel" id="phone" name="phone" class="signup-form__input">
+            </div>
+
+            <fieldset class="signup-form__fieldset">
+                <legend class="signup-form__legend">Nationality:</legend>
+                <div class="signup-form__row">
+                    <div class="signup-form__radio-group">
+                        <input type="radio" name="nationality" id="nat-jo" value="jordanian" class="signup-form__radio-input">
+                        <label for="nat-jo" class="signup-form__radio-label">Jordanian</label>
+                    </div>
+
+                    <div class="signup-form__radio-group">
+                        <input type="radio" name="nationality" id="nat-other" value="non-jordanian" class="signup-form__radio-input">
+                        <label for="nat-other" class="signup-form__radio-label">Not Jordanian</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="signup-form__group">
+                <label for="gender" class="signup-form__label">Gender:</label>
+                <select id="gender" name="gender" class="signup-form__input">
+                    <option value="prefer-not-to-say" selected>Prefer not to say</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+
+            <button type="submit" class="signup-form__btn">Submit Form</button>
+
+        </form>
+        </div>
+    </main>
+
+</body>
+</html>
